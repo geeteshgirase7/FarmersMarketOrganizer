@@ -1,0 +1,43 @@
+@page
+@model FarmersMarketOrganizer.Pages_Bookings.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>Booking</h4>
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Booking.VendorId" class="control-label"></label>
+                <select asp-for="Booking.VendorId" class ="form-control" asp-items="ViewBag.VendorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.StallId" class="control-label"></label>
+                <select asp-for="Booking.StallId" class ="form-control" asp-items="ViewBag.StallId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.MarketDayId" class="control-label"></label>
+                <select asp-for="Booking.MarketDayId" class ="form-control" asp-items="ViewBag.MarketDayId"></select>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Booking.IsConfirmed" /> @Html.DisplayNameFor(model => model.Booking.IsConfirmed)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

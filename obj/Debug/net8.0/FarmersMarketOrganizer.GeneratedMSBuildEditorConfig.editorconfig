@@ -26,6 +26,90 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\z004z26p\OneDrive - Siemens AG\Desktop\Geetesh\Projects\FarmersMarketOrganizer
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Bookings/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Bookings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Bookings/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Bookings/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Bookings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/MarketDays/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFya2V0RGF5c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/MarketDays/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFya2V0RGF5c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/MarketDays/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFya2V0RGF5c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/MarketDays/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFya2V0RGF5c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/MarketDays/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFya2V0RGF5c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Stalls/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhbGxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Stalls/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhbGxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Stalls/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhbGxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Stalls/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhbGxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Stalls/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhbGxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Vendors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Vendors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Vendors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Vendors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/Vendors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,10 +128,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/z004z26p/OneDrive - Siemens AG/Desktop/Geetesh/Projects/FarmersMarketOrganizer/Views/Shared/_Layout.cshtml]

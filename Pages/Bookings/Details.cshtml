@@ -1,0 +1,43 @@
+@page
+@model FarmersMarketOrganizer.Pages_Bookings.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Vendor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Vendor.BusinessName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.Stall)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.Stall.LocationCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.MarketDay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.MarketDay.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.IsConfirmed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Booking.IsConfirmed)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Booking.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -6,8 +6,10 @@ public class Stall
     public int Id { get; set; }
 
     [Required]
-    public string LocationCode { get; set; }  // e.g., A1, B3, etc.
+    [MaxLength(100)]  // ✅ Set a max length instead of 'max'
+    public string LocationCode { get; set; }
 
+    [MaxLength(500)]  // ✅ Set a length to avoid SQLite crash
     public string Description { get; set; }
 
     public List<Booking> Bookings { get; set; }
