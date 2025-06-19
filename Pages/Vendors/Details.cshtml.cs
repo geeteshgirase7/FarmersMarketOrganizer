@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
+using FarmersMarketOrganizer.Models;
 
 namespace FarmersMarketOrganizer.Pages_Vendors
 {
@@ -17,25 +15,15 @@ namespace FarmersMarketOrganizer.Pages_Vendors
             _context = context;
         }
 
-        public Vendor Vendor { get; set; } = default!;
+        public Vendor Vendor { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            Vendor = await _context.Vendors.FindAsync(id);
 
-            var vendor = await _context.Vendors.FirstOrDefaultAsync(m => m.Id == id);
+            if (Vendor == null) return NotFound();
 
-            if (vendor is not null)
-            {
-                Vendor = vendor;
-
-                return Page();
-            }
-
-            return NotFound();
+            return Page();
         }
     }
 }

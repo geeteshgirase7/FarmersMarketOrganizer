@@ -1,12 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using FarmersMarketOrganizer.Data;
+using FarmersMarketOrganizer.Models;
 
-namespace FarmersMarketOrganizer.Pages_Vendors
+namespace FarmersMarketOrganizer.Pages.Vendors
 {
     public class IndexModel : PageModel
     {
@@ -17,7 +16,7 @@ namespace FarmersMarketOrganizer.Pages_Vendors
             _context = context;
         }
 
-        public IList<Vendor> Vendor { get;set; } = default!;
+        public IList<Vendor> Vendor { get; set; } = new List<Vendor>();
 
         public async Task OnGetAsync()
         {

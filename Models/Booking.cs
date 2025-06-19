@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 public class Booking
 {
     public int Id { get; set; }
