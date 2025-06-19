@@ -1,0 +1,15 @@
+@page
+@model FarmersMarketOrganizer.Pages.IndexModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h1>Farmers Market Organizer</h1>
+
+<p>Use the navigation bar above to manage:</p>
+<ul>
+    <li><a asp-page="/Vendors/Index">Vendors</a></li>
+    <li><a asp-page="/Stalls/Index">Stalls</a></li>
+    <li><a asp-page="/MarketDays/Index">Market Days</a></li>
+    <li><a asp-page="/Bookings/Index">Bookings</a></li>
+</ul>

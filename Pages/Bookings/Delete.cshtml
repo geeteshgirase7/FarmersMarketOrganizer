@@ -1,46 +1,29 @@
 @page
-@model FarmersMarketOrganizer.Pages_Bookings.DeleteModel
-
+@model FarmersMarketOrganizer.Pages.Bookings.DeleteModel
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Delete Booking";
 }
 
-<h1>Delete</h1>
+<h1>Delete Booking</h1>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Booking</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.Vendor)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.Vendor.BusinessName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.Stall)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.Stall.LocationCode)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.MarketDay)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.MarketDay.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.IsConfirmed)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.IsConfirmed)
-        </dd>
-    </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="Booking.Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
-    </form>
-</div>
+<h4>Are you sure you want to delete this?</h4>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">Vendor</dt>
+    <dd class="col-sm-9">@Model.Booking.Vendor.BusinessName</dd>
+
+    <dt class="col-sm-3">Stall</dt>
+    <dd class="col-sm-9">@Model.Booking.Stall.LocationCode</dd>
+
+    <dt class="col-sm-3">Market Day</dt>
+    <dd class="col-sm-9">@Model.Booking.MarketDay.Date.ToShortDateString()</dd>
+
+    <dt class="col-sm-3">Is Confirmed</dt>
+    <dd class="col-sm-9">@Model.Booking.IsConfirmed</dd>
+</dl>
+
+<form method="post">
+    <input type="hidden" asp-for="Booking.Id" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-page="./Index">Cancel</a>
+</form>

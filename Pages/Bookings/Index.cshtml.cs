@@ -22,9 +22,10 @@ namespace FarmersMarketOrganizer.Pages_Bookings
         public async Task OnGetAsync()
         {
             Booking = await _context.Bookings
-                .Include(b => b.MarketDay)
+                .Include(b => b.Vendor)
                 .Include(b => b.Stall)
-                .Include(b => b.Vendor).ToListAsync();
+                .Include(b => b.MarketDay)
+                .ToListAsync();
         }
     }
 }

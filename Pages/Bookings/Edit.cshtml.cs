@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using FarmersMarketOrganizer.Models;
 
 namespace FarmersMarketOrganizer.Pages_Bookings
 {
@@ -19,33 +17,34 @@ namespace FarmersMarketOrganizer.Pages_Bookings
         }
 
         [BindProperty]
-        public Booking Booking { get; set; } = default!;
+        public Booking Booking { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public SelectList VendorOptions { get; set; }
+        public SelectList StallOptions { get; set; }
+        public SelectList MarketDayOptions { get; set; }
+
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            if (id == null)
+            Booking = await _context.Bookings
+                .Include(b => b.Vendor)
+                .Include(b => b.Stall)
+                .Include(b => b.MarketDay)
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (Booking == null)
             {
                 return NotFound();
             }
 
-            var booking =  await _context.Bookings.FirstOrDefaultAsync(m => m.Id == id);
-            if (booking == null)
-            {
-                return NotFound();
-            }
-            Booking = booking;
-           ViewData["MarketDayId"] = new SelectList(_context.MarketDays, "Id", "Id");
-           ViewData["StallId"] = new SelectList(_context.Stalls, "Id", "LocationCode");
-           ViewData["VendorId"] = new SelectList(_context.Vendors, "Id", "BusinessName");
+            await PopulateDropdownsAsync();
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                await PopulateDropdownsAsync();
                 return Page();
             }
 
@@ -57,7 +56,7 @@ namespace FarmersMarketOrganizer.Pages_Bookings
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BookingExists(Booking.Id))
+                if (!_context.Bookings.Any(e => e.Id == Booking.Id))
                 {
                     return NotFound();
                 }
@@ -70,9 +69,11 @@ namespace FarmersMarketOrganizer.Pages_Bookings
             return RedirectToPage("./Index");
         }
 
-        private bool BookingExists(int id)
+        private async Task PopulateDropdownsAsync()
         {
-            return _context.Bookings.Any(e => e.Id == id);
+            VendorOptions = new SelectList(await _context.Vendors.ToListAsync(), "Id", "BusinessName");
+            StallOptions = new SelectList(await _context.Stalls.ToListAsync(), "Id", "LocationCode");
+            MarketDayOptions = new SelectList(await _context.MarketDays.ToListAsync(), "Id", "Date");
         }
     }
 }

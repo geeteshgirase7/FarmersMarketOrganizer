@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using FarmersMarketOrganizer.Models;
 
-namespace FarmersMarketOrganizer.Pages_Bookings
+namespace FarmersMarketOrganizer.Pages.Bookings
 {
     public class DeleteModel : PageModel
     {
@@ -18,38 +16,30 @@ namespace FarmersMarketOrganizer.Pages_Bookings
         }
 
         [BindProperty]
-        public Booking Booking { get; set; } = default!;
+        public Booking Booking { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            if (id == null)
+            Booking = await _context.Bookings
+                .Include(b => b.Vendor)
+                .Include(b => b.Stall)
+                .Include(b => b.MarketDay)
+                .FirstOrDefaultAsync(b => b.Id == id);
+
+            if (Booking == null)
             {
                 return NotFound();
             }
 
-            var booking = await _context.Bookings.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (booking is not null)
-            {
-                Booking = booking;
-
-                return Page();
-            }
-
-            return NotFound();
+            return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public async Task<IActionResult> OnPostAsync(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            Booking = await _context.Bookings.FindAsync(id);
 
-            var booking = await _context.Bookings.FindAsync(id);
-            if (booking != null)
+            if (Booking != null)
             {
-                Booking = booking;
                 _context.Bookings.Remove(Booking);
                 await _context.SaveChangesAsync();
             }

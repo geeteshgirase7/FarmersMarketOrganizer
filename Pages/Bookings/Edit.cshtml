@@ -2,41 +2,31 @@
 @model FarmersMarketOrganizer.Pages_Bookings.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Booking";
 }
 
-<h1>Edit</h1>
+<h1>Edit Booking</h1>
 
 <h4>Booking</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Booking.Id" />
             <div class="form-group">
-                
                 <label asp-for="Booking.VendorId" class="control-label"></label>
-                <select asp-for="Booking.VendorId" class="form-control" asp-items="ViewBag.VendorId"></select>
-                <span asp-validation-for="Booking.VendorId" class="text-danger"></span>
+                <select asp-for="Booking.VendorId" class="form-control" asp-items="Model.VendorOptions"></select>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Booking.StallId" class="control-label"></label>
-                <select asp-for="Booking.StallId" class="form-control" asp-items="ViewBag.StallId"></select>
-                <span asp-validation-for="Booking.StallId" class="text-danger"></span>
+                <select asp-for="Booking.StallId" class="form-control" asp-items="Model.StallOptions"></select>
             </div>
             <div class="form-group">
-                
                 <label asp-for="Booking.MarketDayId" class="control-label"></label>
-                <select asp-for="Booking.MarketDayId" class="form-control" asp-items="ViewBag.MarketDayId"></select>
-                <span asp-validation-for="Booking.MarketDayId" class="text-danger"></span>
+                <select asp-for="Booking.MarketDayId" class="form-control" asp-items="Model.MarketDayOptions"></select>
             </div>
-            <div class="form-group form-check">
-                
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Booking.IsConfirmed" /> @Html.DisplayNameFor(model => model.Booking.IsConfirmed)
-                </label>
+            <div class="form-group">
+                <label asp-for="Booking.IsConfirmed" class="control-label"></label>
+                <input asp-for="Booking.IsConfirmed" class="form-control" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -46,6 +36,5 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
-

@@ -1,48 +1,32 @@
 @page
 @model FarmersMarketOrganizer.Pages_Bookings.IndexModel
-
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Bookings";
 }
 
-<h1>Index</h1>
+<h1>Bookings</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a class="btn btn-primary" asp-page="Create">Create New</a>
 </p>
-<table class="table">
+
+<table class="table table-striped">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Booking[0].Vendor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Booking[0].Stall)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Booking[0].MarketDay)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Booking[0].IsConfirmed)
-            </th>
+            <th>@Html.DisplayNameFor(model => model.Booking[0].Vendor.BusinessName)</th>
+            <th>@Html.DisplayNameFor(model => model.Booking[0].Stall.LocationCode)</th>
+            <th>@Html.DisplayNameFor(model => model.Booking[0].MarketDay.Date)</th>
+            <th>@Html.DisplayNameFor(model => model.Booking[0].IsConfirmed)</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Booking) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Vendor.BusinessName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stall.LocationCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MarketDay.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsConfirmed)
-            </td>
+            <td>@item.Vendor?.BusinessName</td>
+            <td>@item.Stall?.LocationCode</td>
+            <td>@item.MarketDay?.Date.ToShortDateString()</td>
+            <td>@item.IsConfirmed</td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
