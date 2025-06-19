@@ -1,0 +1,60 @@
+# Ignore build and publish folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.vspscc
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# ASP.NET secrets
+secrets.json
+
+# Rider settings
+.idea/
+
+# ASP.NET Core files
+*.db
+*.log
+*.pid
+
+# Entity Framework Migrations snapshot files (optional)
+Migrations/*.Designer.cs
+Migrations/*.g.cs
+Migrations/*.g.i.cs
+
+# ASP.NET temporary files
+*.swp
+*.swx
+*.tmp
+*.bak
+*.old
+
+# NPM packages (if any)
+node_modules/
+
+# Package manager output
+*.nupkg
+*.snupkg
+packages/
+
+# Backup files
+*.orig
+
+# Logs
+*.log
+
+# Auto-generated files
+*.generated.cs
+
+# Dotnet global tools
+.dotnet/tools/
+
+# OneDrive artifacts (since you're using OneDrive)
+~$*
